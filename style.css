@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
@@ -20,41 +21,35 @@ header {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: #fff;
-    padding: 4rem 0;
+    padding: 5rem 0;
     text-align: center;
     position: relative;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header h1 {
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
 }
 
 header p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .contact-info a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
+    margin: 0 20px;
+    font-size: 1.3rem;
     transition: color 0.3s ease;
 }
 
@@ -63,18 +58,18 @@ header p {
 }
 
 .contact-info i {
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 .section {
-    padding: 3rem 0;
+    padding: 4rem 0;
     border-bottom: 1px solid #333;
 }
 
 .section h2 {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     position: relative;
 }
@@ -82,35 +77,70 @@ header p {
 .section h2::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
+    width: 80px;
+    height: 4px;
     background: #03a9f4;
 }
 
-.project, .job, .certification, .achievement {
+.job {
     background: #1f1f1f;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover, .job:hover, .certification:hover, .achievement:hover {
+.job:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
 }
 
-.project h3 a, .job h3, .certification p, .achievement p {
+.job h3 {
+    color: #03a9f4;
+    margin-bottom: 1rem;
+}
+
+.projects-grid, .certifications-grid, .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .certification-card, .achievement-card {
+    background: #1f1f1f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover, .certification-card:hover, .achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+.project-card h3 {
+    color: #03a9f4;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
     color: #03a9f4;
     text-decoration: none;
+    font-weight: 500;
+    align-self: flex-end;
+    margin-top: 1rem;
 }
 
-.project p {
-    font-weight: 300;
+.certification-card h4, .achievement-card p {
+    color: #e0e0e0;
 }
 
 .skills-list {
@@ -121,9 +151,9 @@ header p {
     display: inline-block;
     background: #333;
     color: #fff;
-    padding: 8px 15px;
-    margin: 8px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
     font-weight: 500;
     transition: background 0.3s ease;
 }
@@ -134,8 +164,8 @@ header p {
 
 footer {
     text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
     background: #1f1f1f;
     color: #aaa;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
