@@ -16,38 +16,54 @@ body {
 }
 
 header {
-    background: #1f1f1f;
+    background: linear-gradient(45deg, #023e8a, #0077b6, #0096c7, #00b4d8, #48cae4);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color: #fff;
     padding: 4rem 0;
     text-align: center;
-    border-bottom: 3px solid #03a9f4;
+    position: relative;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 300;
-}
-
-.contact-info {
-    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .contact-info a {
-    color: #03a9f4;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #fff;
+    color: #caf0f8;
+}
+
+.contact-info i {
+    margin-right: 8px;
 }
 
 .section {
@@ -87,7 +103,6 @@ header p {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
-
 
 .project h3 a, .job h3, .certification p, .achievement p {
     color: #03a9f4;
